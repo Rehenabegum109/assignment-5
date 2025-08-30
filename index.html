@@ -8,32 +8,32 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <!-- tailwind css cdn -->
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-font awesome cdn
+<!-- font awesome cdn -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
 
 </head>
-<body class="max-w-[1280px] mx-auto">
+<body class="max-w-[1280px]  mx-auto">
     <!-- Header -->
-    <header class="flex justify-between  p-5 max-w-[1280px] mx-auto ">
-        <div class="flex items-center">
-            <img src="./assets/logo.png" alt=""class="w-12">
-            <h1 class="font-bold text-xl text-green-800">Emergency <br> Service</h1>
+    <header class="flex justify-between  p-5  md:flex-row md:justify-between ">
+        <div class="flex items-center justify-between ">
+            <img src="./assets/logo.png" alt=""class="w-12 ">
+            <h1 class="font-bold text-xl sm:font-semibold text-green-800">Emergency <br> Service</h1>
         </div>
-        <div class="flex justify-between items-center gap-2  ">
-            <div class="flex items-center rounded-2xl bg-[#41ff6b1a] px-2 py-1 gap-1  ">
-                <span id="heart-count">0</span>
+        <div class="flex justify-between items-center gap-2 md:gap-5 md:flex md:gap-1  ">
+            <div class="flex items-center rounded-2xl bg-[#41ff6b1a] md:px-6 md:py-3 gap-2 py-3 px-3  ">
+                <span  id="navbar-count" class="font-bold">0</span>
                 <img src="./assets/heart.png" alt="" class="w-6"
                 ></div>
-            <div class="flex items-center rounded-2xl bg-[#41ff6b1a] px-2 py-1 gap-1  " >
-                <span id="coin-count">100</span>
+            <div class="flex items-center rounded-2xl bg-[#41ff6b1a] md:px-6 md:py-3 px-3 py-1 gap-2  " >
+                <span id="coin-count" class="font-bold">100</span>
                 <img src="./assets/coin.png" alt="" class="w-6">
             </div>
-            <button class=" rounded-3xl bg-[#00A63E] px-2 py-1 gap-1 i " id="copy-count">2<span> copy</span></button>
+            <button class=" rounded-3xl bg-[#00A63E] md:px-7 md:py-3 px-4 py-3 gap-1 text-white " id="copy-count">2<span> Copy</span></button>
         </div>
         
     </header>
     <!-- Hero section  -->
-         <main class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white flex justify-center items-center h-[250px] flex-col  "> 
+         <main class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white flex justify-center items-center h-[250px] flex-col   "> 
             <div>
                 <img src="./assets/logo-dark.png" alt="" class="w-32 mx-auto mb-3">
           <div class="text-center">
@@ -43,39 +43,44 @@ font awesome cdn
             </div>
          </main>
          <!-- Main section -->
-          <main class="bg-gray-100 ">
+
+          <section class="bg-gray-200 border-1 w-full p-6 ">
       <section id="banner"></section>
 
       <section
         id="porducts-container "
-        class=" py-10 grid grid-cols-12 gap-8"
+        class=" py-10 grid grid-cols-2 md:grid md:grid-cols-12 gap-8"
       >
-        <section id="service-box" class="col-span-9 ml-5">
+        <section id="service-box" class="col-span-2 ml-5 md:col-span-9">
           <div class="emagency-service">
             
 
-            <div class="service-items grid grid-cols-3 gap-5">
+            <div class="service-items grid grid-cols-1 md:grid-cols-3 gap-5 rounded-xl">
               <!-- service card 1  -->
-              <div id="card-1" class="card bg-slate-500 ">
+              <div id="card-1" class="card bg-[#ffffff] ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
                         <img src="./assets/emergency.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
-                    <h2 class="card-title font-semibold">National Emergency Number</h2>
+                    <div class="pb-5">
+                    <h2 class=" card-title font-semibold">National Emergency Number</h2>
                     <p class="text-[#4A4A4A]">National Emergency</p>
-                    <span class="text-2xl font-bold">999</span>
-                    <p class="w-10  border-2 rounded-xl text-center bg-[#4A4A4A]">All</p>
+                    </div>
+                    <div class="pb-4">
+                    <span class="text-2xl font-bold number">999</span>
+                    <p class="w-10  border-2 rounded-xl text-center bg-gray-200">All</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button  class=" border-2 border-gray-300 rounded-2xl px-8 copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -83,26 +88,30 @@ font awesome cdn
             </div>
           </div>
           <!-- service card 2  -->
-               <div id="card-1" class="card bg-slate-500 ">
+               <div id="card-1" class="card bg-[#ffffff] ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
-                        <img src="./assets/fire-service.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                      <img src="./assets/fire-service.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
+                    <div class="pb-5">
                     <h2 class="card-title font-semibold">Fire Service Number</h2>
                     <p class="text-[#4A4A4A]">Fire Service</p>
-                    <span class="text-2xl font-bold">999</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">Fire</p>
+                    </div>
+                    <div class="pb-4">
+                    <span  class="text-2xl font-bold number ">999</span>
+                    <p class="w-20 h-6  rounded-xl text-center bg-gray-200">Fire</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button class=" copyClicks border-2 border-gray-300 rounded-2xl px-8   ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button  class="call-btn bg-[#00A63E] rounded-2xl  text-white font-medium px-8 ">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -113,26 +122,30 @@ font awesome cdn
 
             <!-- service card 3 -->
 
-              <div id="card-1" class="card bg-slate-500 ">
+              <div id="card-1" class="card bg-[#ffffff] ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
-                        <img src="./assets/police.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <img src="./assets/police.png" alt=""class="w-10 h-10 bg-pink-200 rounded-lg p-2">
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
-                    <h2 class="card-title font-semibold">Police Helpline Number</h2>
+                    <div class="pb-5">
+                    <h2  class=" card-title font-semibold">Police Helpline Number</h2>
                     <p class="text-[#4A4A4A]">Police</p>
-                    <span class="text-2xl font-bold">999</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">police</p>
+                    </div>
+                    <div class="pb-4">
+                    <span class="text-2xl font-bold number ">999</span>
+                    <p class="w-20 h-6 rounded-xl text-center bg-gray-200">police</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button class=" border-2 border-gray-300 rounded-2xl px-8 copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -142,26 +155,30 @@ font awesome cdn
           
             <!-- service card 4 -->
 
-              <div id="card-1" class="card bg-slate-500 ">
+              <div id="card-1" class="card bg-[#ffffff] ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
                         <img src="./assets/ambulance.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
-                    <h2 class="card-title font-semibold">Ambulance Service</h2>
+                    <div class="pb-5">
+                    <h2 class=" card-title font-semibold">Ambulance Service</h2>
                     <p class="text-[#4A4A4A]">Ambulance Service</p>
-                    <span class="text-2xl font-bold">1994-999999</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">Health</p>
+                    </div>
+                    <div class="pb-4">
+                    <span class="number text-2xl font-bold ">1994-999999</span>
+                    <p class="w-20 h-6  rounded-xl text-center bg-gray-200">Health</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button  class=" border-2 border-gray-300 rounded-2xl px-8 copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -170,26 +187,30 @@ font awesome cdn
           </div>
             <!-- service card 5 -->
 
-              <div id="card-1" class="card bg-slate-500 ">
+              <div id="card-1" class="card bg-[#ffffff] rounded-xl ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
                         <img src="./assets/emergency.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
+                    <div class="pb-5">
                     <h2 class="card-title font-semibold">Women & Child Helpline</h2>
                     <p class="text-[#4A4A4A]">Women & Child Helpline</p>
-                    <span class="text-2xl font-bold">109</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">Help</p>
+                    </div>
+                    <div class="pb-4">
+                    <span  class=" number text-3xl font-bold ">109</span>
+                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-gray-200">Help</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button  class=" border-2 border-gray-300 rounded-2xl px-8 copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -197,27 +218,31 @@ font awesome cdn
             </div>
           </div>
             <!-- service card 6 -->
-
-              <div id="card-1" class="card bg-slate-500 ">
+         <div id="card-1" class="card bg-[#ffffff] ">
                 
                 
-                  <div class="flex justify-between items-center mt-5 p-4">
+                  <div class="flex justify-between items-center mt-4 p-4">
                         <img src="./assets/emergency.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
+                    <div class="pb-5">
                     <h2 class="card-title font-semibold">Anti-Corruption Helpline</h2>
+                    
                     <p class="text-[#4A4A4A]">Anti-Corruption</p>
-                    <span class="text-2xl font-bold">106</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">Govt</p>
+                    </div>
+                    <div class="pb-4">
+                    <span class="number text-2xl font-bold">106</span>
+                    <p class="w-20 h-6 rounded-xl text-center  bg-gray-200">Govt</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button  class=" border-2 border-gray-300 rounded-2xl px-8 copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -226,26 +251,30 @@ font awesome cdn
           </div>
             <!-- service card 7-->
 
-              <div id="card-1" class="card bg-slate-500 ">
+              <div id="card-1" class="card  bg-[#ffffff] ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
                         <img src="./assets/emergency.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
+                    <div class="pb-5">
                     <h2 class="card-title font-semibold">Electricity Helpline</h2>
                     <p class="text-[#4A4A4A]">Electricity Outage</p>
-                    <span class="text-2xl font-bold">16216</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">Electricity</p>
+                    </div>
+                    <div class="pb-4">
+                    <span  class="number text-2xl font-bold ">16216</span>
+                    <p class="w-20 h-6  rounded-xl text-center bg-gray-200">Electricity</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button  class=" border-2 border-gray-300 copyClicks rounded-2xl px-8   ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -254,55 +283,64 @@ font awesome cdn
           </div>
             <!-- service card 8-->
 
-              <div id="card-1" class="card bg-slate-500 ">
+              <div id="card-1" class="card bg-[#ffffff] ">
                 
                 
-                  <div class="flex justify-between items-center mt-5 p-4">
+                  <div class="flex justify-between items-center mt-4 p-4">
                         <img src="./assets/emergency.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
+                    <div class="pb-5">
                     <h2 class="card-title font-semibold">Brac Helpline</h2>
                     
                     <p class="text-[#4A4A4A]">Brac</p>
-                    <span class="text-2xl font-bold">16445</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">NG0</p>
+                    </div>
+                    <div class="pb-4">
+                    <span class="number text-2xl font-bold">16445</span>
+                    <p class="w-20 h-6 rounded-xl text-center  bg-gray-200">NG0</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button  class=" border-2 border-gray-300 rounded-2xl px-8 copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
               
             </div>
           </div>
-            <!-- service card 7-->
+            <!-- service card 9-->
 
-              <div id="card-1" class="card bg-white-500 ">
+              <div id="card-1" class="card bg-[#ffffff]  ">
                 
                 
                   <div class="flex justify-between items-center mt-5 p-4">
-                        <img src="./assets/emergency.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
-                        <i class="fa-regular fa-heart"></i> 
+                        <img src="./assets/Bangladesh-Railway.png" alt="" class="w-10 h-10 bg-pink-200 rounded-lg p-2">
+                        <i id="count-icon" class="fa-regular fa-heart"></i> 
                   </div>
                   
                   <div class="card-body">
-                    <h2 class="card-title font-semibold">Bangladesh Railway Helpline</h2>
-                    <p class="text-[#4A4A4A]">Bangladesh Railway</p>
-                    <span class="text-2xl font-bold">163</span>
-                    <p class="w-20 h-6 border-2 rounded-xl text-center bg-[#4A4A4A]">Travel</p>
+                    <div class="pb-5">
+                    <h2 class="card-title font-semibold  ">Bangladesh Railway Helpline</h2>
+                    <p class="text-[#4A4A4A] font-semibold">Bangladesh Railway</p>
+                    </div>
+                    <div class="pb-4"
+                    >`
+                    <span class="number text-3xl font-bold ">163</span>
+                    <p class="w-20 h-8  rounded-xl text-center  bg-gray-200">Travel</p>
+                    </div>
                     <div class=" flex justify-between ">
-                    <button class=" border-2 rounded-2xl px-8   ">
+                    <button class=" border-2 border-gray-300 rounded-2xl px-8  copyClicks  ">
                   
                    <i class="fa-regular fa-copy"></i> Copy
                    
                    </button>
-                   <button class="btn  bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
+                   <button class="call-btn bg-[#00A63E] rounded-2xl  text-white font-medium px-8">
                   <i class="fa-solid fa-phone"></i>Call
                    </button>
               </div>
@@ -313,30 +351,25 @@ font awesome cdn
           
         </section>
 
-        <aside id="cart-box" class="col-span-3">
-          <div class="bg-white p-5 rounded">
-            <h2 class="font-bold mb-5">Have a Cupon</h2>
-            <div class="join">
-              <input class="input join-item" placeholder="Email" />
-              <button class="btn join-item rounded-r-xl bg-pink-500 text-white">
-                Apply
-              </button>
+        <aside id="history" class="col-span-3 mt-3 mr-4 p-3   bg-[#ffffff] pt-10  ">
+          <div class="flex justify-between text-center mt-3" >
+            
+<h2 class="font-bold " ><i class="fa-regular fa-clock"></i> Call History</h2>
+          
+            <button id="clear-btn" class="btn text-center w-12 h-8 rounded-xl bg-[#00A63E] text-white">Clear</button>
             </div>
+          
+          <div id="call-history" class="mt-3 px-1 ">
+
+            
           </div>
-          <div class="cart-box bg-white mt-10 p-5">
-            <h2 class="font-bold">Cart</h2>
-            <button class="btn" id="btn-clear">Clear</button>
-            <div class="space-y-5" id="cart-container"></div>
-            <div class="">
-              <h2>Total Price: <span id="total-price">0</span> TK</h2>
-              <h2>Total Quantity: <span id="total-quantity">0</span> Items</h2>
-              <button class="btn bg-pink-500 text-white btn-block">
-                Make Purchase
-              </button>
-            </div>
-          </div>
+
         </aside>
       </section>
-    </main>
+          </section>
+
+<script src="./index.js"></script>
+
+
 </body>
 </html>
