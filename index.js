@@ -84,7 +84,7 @@ for( let btn of copyBtn ) {
     btn.addEventListener("click",() =>{
       const number =btn.parentNode.parentElement.querySelector('.number').innerText;
       navigator.clipboard.writeText(number).then(()=>{
-alert(`copied number +${number}`)
+alert(`copied number ${number}`)
       })
       
         copyLikes++;
